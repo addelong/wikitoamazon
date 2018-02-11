@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wikipedia to Amazon",
+  "description": "This extension inserts Amazon links on Wikipedia pages for books with an ISBN number.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.wikipedia.org/wiki/*"],
+      "js": ["jquery-3.3.1.min.js", "wikitoamazon.js"]
+    }
+  ],
+  "web_accessible_resources": ["amazonlogo.png"]
+}
